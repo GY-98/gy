@@ -1,0 +1,68 @@
+            *{
+				margin: 0px;
+				padding: 0px;
+			}
+			#box-01{
+				width: 100%;
+				height: 40px;
+				position: relative;
+				background: black;  
+			}
+			#box01-info{
+				width: 1300px;
+				height: 100%;
+				color: gainsboro;
+				line-height: 40px;
+				position: relative;
+				left: 50%;
+				margin-left: -650px;
+				font-size: 13px;
+			}
+			#box01-info-left{
+				position: absolute;
+				left: 10px;
+			}
+			#box-01-info-right{
+				position: absolute;
+				right: 35px;
+				z-index: 99;/*调整层级*/
+			}
+			#box01-car{
+				display: inline-block;/*行内块元素*/
+				width: 120px;
+				height: 100%;
+				background: rgba(255,255,255,0.2);/*透明度设置*/
+				text-align: center;
+				margin-left: 10px;
+			}
+			#car-img{
+				width: 20px;
+				position: relative;
+				top: 5px;
+			}
+			#car-info{
+				width: 260px;
+				height: 150px;
+				background: white;
+				color: black;
+				text-align: center;
+				line-height: 150px;
+				position: absolute;
+				top: 40px;
+				right: 0px;
+				border-bottom: 1px solid gainsboro;
+				border-left: 1px solid gainsboro;
+				border-right: 1px solid gainsboro;
+				display: none;/*变无*/
+
+			}
+			.box01-s{
+				color: #2f4f4f;
+			}
+			.box01-text:hover{
+				color: white;
+			}
+			
+			
+			
+			

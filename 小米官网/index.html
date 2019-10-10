@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>大米商城</title>
+		<link rel="stylesheet" href="css/d1.css" />
+		<link rel="stylesheet" href="css/d2-01.css" />
+		
+		<script type="text/javascript" src="js/jquery-2.1.0.js" ></script>
+		<script type="text/javascript" src="js/d1.js" ></script>
+		<script type="text/javascript" src="js/d2-o1.js"></script>
+		
+	    <script>
+	    	$(document).ready(function(){
+	    		setInterval(genghuan,3000);
+	    		/*
+	    		 * 更换图片
+	    		 */
+	    		function genghuan(){
+	    			$(".box-02-02-lunbo-img:last-child").animate(/*animate：动画*/
+	    			    {"opacity":"0"},/*要改变的属性，透明度0*/
+	    			    400,/*改变所执行的时间*/
+	    			    function(){/*改变完成后执行的方法*/
+	    				    $("#box-02-02-lunbo").prepend($(this));/*prepend：添加到尾部*/
+	    				    $(this).animate({"opacity":"1"},400);
+	    			    }
+	    			);
+	    		}
+	    		
+	    		$(".box-02-02-left-text").mouseenter(function(){
+	    		  
+	    		$("#box-02-02-right-01").css("display","none");
+	    		$("#box-02-02-right-02").css("display","none");
+	    		$("#box-02-02-right-03").css("display","none");
+	    		$("#box-02-02-right-04").css("display","none");
+	    		$("#box-02-02-right-05").css("display","none");
+	    		$("#box-02-02-right-06").css("display","none");
+	    		$("#box-02-02-right-07").css("display","none");
+	    		$("#box-02-02-right-08").css("display","none");
+	    		$("#box-02-02-right-09").css("display","none");
+	    		$("#box-02-02-right-10").css("display","none");
+	    		var tag = $(this).index();
+	    		switch(tag){
+	    			case 0:
+	    			    $("#box-02-02-right-01").css("display","block");
+	    			break;
+	    			case 1:
+	    			$("#box-02-02-right-02").css("display","block");
+	    			break;
+	    			case 2:
+	    			$("#box-02-02-right-03").css("display","block");
+	    			break;
+	    			case 3:
+	    			$("#box-02-02-right-04").css("display","block");
+	    			break;
+	    			case 4:
+	    			$("#box-02-02-right-05").css("display","block");
+	    			break;
+	    			case 5:
+	    			$("#box-02-02-right-06").css("display","block");
+	    			break;
+	    			case 6:
+	    			$("#box-02-02-right-07").css("display","block");
+	    			break;
+	    			case 7:
+	    			$("#box-02-02-right-08").css("display","block");
+	    			break;
+	    			case 8:
+	    			$("#box-02-02-right-09").css("display","block");
+	    			break;
+	    			case 9:
+	    			$("#box-02-02-right-10").css("display","block");
+	    			break;
+	    		}
+	    		/*fadeIn:淡入*/
+	    		$("#box-02-02-right").fadeIn(100);
+	    	});
+	    	$("#box-02-02").mouseleave(function(){
+	    		/*fadeOut:淡出*/
+	    		$("#box-02-02-right").fadeOut(100);
+	    	});
+	    		
+	    	});
+	    	
+	    	
+	    </script>
+	</head>
+	<body>
+		<div id="box-01">
+			<div id="box01-info">
+				<div id="box01-info-left">
+					<span class="box01-text">大米商城&nbsp;</span>
+					<span class="box01-s">|</span>
+					<span class="box01-text">&nbsp;MIUI&nbsp;</span>
+					<span class="box01-s">|</span>
+					<span class="box01-text">&nbsp;IoT&nbsp;</span>
+					<span class="box01-s">|</span>
+					<span class="box01-text">&nbsp;云服务&nbsp;</span>
+					<span class="box01-s">|</span>
+					<span class="box01-text">&nbsp;金融&nbsp;</span>
+					<span class="box01-s">|</span>
+					<span class="box01-text">&nbsp;有品&nbsp;</span>
+					<span class="box01-s">|</span>
+					<span class="box01-text">&nbsp;小爱开放平台&nbsp;</span>
+					<span class="box01-s">|</span>
+					<span class="box01-text">&nbsp;政企服务&nbsp;</span>
+					<span class="box01-s">|</span>
+					<span class="box01-text">&nbsp;资质证照&nbsp;</span>
+					<span class="box01-s">|</span>
+					<span class="box01-text">&nbsp;协议规则&nbsp;</span>
+					<span class="box01-s">|</span>
+					<span class="box01-text">&nbsp;下载app&nbsp;</span>
+					<span class="box01-s">|</span>
+					<span class="box01-text">&nbsp;Select&nbsp;Regino&nbsp;</span>
+				</div>
+				<div id="box-01-info-right">
+					<span id="loginbtn" class="box01-text">&nbsp;登录&nbsp;</span>
+					<span class="box01-s">|</span>
+					<a href="注册小米账号.html"> <span id="registerbtn" class="box01-text">注册</span></a>
+				    <span class="box01-s">|</span>
+				    <span class="box01-text">&nbsp;消息通知&nbsp;</span>
+				    <div id="box01-car">
+				    	<img id="car-img" src="img/d1/car_yes.png" />
+				    	<span id="car-text">购物车(0)</span>
+				    </div>
+				    <div id="car-info">购物车中没有商品，赶紧选购吧</div>
+				</div>
+			</div>
+		</div>
+		<div id="box-02">
+			<div id="box-02-01">
+				<img id="logo" src="img/d2/logo.jpg" />
+				<div id="box-02-01-center">
+					<span class="box-02-01-text">大米手机</span>
+					<span class="box-02-01-text">黑米</span>
+					<span class="box-02-01-text">电视</span>
+					<span class="box-02-01-text">笔记本</span>
+					<span class="box-02-01-text">家电</span>
+					<span class="box-02-01-text">新品</span>
+					<span class="box-02-01-text">路由器</span>
+					<span class="box-02-01-text">智能硬件</span>
+					<span class="box-02-01-text1">服务</span>
+					<span class="box-02-01-text1">社区</span>
+				</div>
+				<div id="box-02-01-search">
+					<input id="box-02-01-input" type="text" />
+					<img id="box-02-01-search-img" src="img/d2/fdj01.png" />
+				</div>
+				<div id="box-02-01-bottom">
+					<div id="box-02-01-bottom-01">
+				        <img src="img/123/1.jpg" />
+				    </div>
+				    <div id="box-02-01-bottom-02">
+                        <img src="img/123/2.jpg" />
+				    </div>
+				    <div id="box-02-01-bottom-03">
+				    	<img src="img/123/3.jpg" />
+				    </div>
+				    <div id="box-02-01-bottom-04">
+				    	<img src="img/123/4.jpg" />
+				    </div>
+				    <div id="box-02-01-bottom-05">
+				    	<img src="img/123/5.png" />
+				    </div>
+				    <div id="box-02-01-bottom-06">
+				    	<img src="img/123/6.jpg" />
+				    </div>
+				    <div id="box-02-01-bottom-07">
+				    	<img src="img/123/7.png" />
+				    </div>
+				    <div id="box-02-01-bottom-08">
+				    	<img src="img/123/8.png" />
+				    </div>
+				</div>
+				    
+				    
+			</div>
+			<div id="box-02-02">
+				<div id="box-02-02-lunbo">
+					<img class="box-02-02-lunbo-img" src="img/d3/img1.jpg"  />
+					<img class="box-02-02-lunbo-img" src="img/d3/img2.jpg"  />
+					<img class="box-02-02-lunbo-img" src="img/d3/img3.jpg"  />
+					<img class="box-02-02-lunbo-img" src="img/d3/img4.jpg"  />
+					<img class="box-02-02-lunbo-img" src="img/d3/img5.jpg"  />
+                    
+				</div>
+				<div id="box-02-02-left">
+					<div class="box-02-02-left-text">
+						<span id="box-02-02-left-text01">手机&nbsp;电话卡</span>
+						<img class="box-02-02-left-text-img" src="img/d3/dy.png" />
+					</div>
+					<div class="box-02-02-left-text">
+						<span id="box-02-02-left-text02">电视&nbsp;盒子</span>
+						<img class="box-02-02-left-text-img" src="img/d3/dy.png" />
+					</div>
+					<div class="box-02-02-left-text">
+						<span id="box-02-02-left-text03">笔记本&nbsp;平板</span>
+						<img class="box-02-02-left-text-img" src="img/d3/dy.png" />
+					</div>
+					<div class="box-02-02-left-text">
+						<span id="box-02-02-left-text04">家电&nbsp;插线板</span>
+						<img class="box-02-02-left-text-img" src="img/d3/dy.png" />
+					</div>
+					<div class="box-02-02-left-text">
+						<span id="box-02-02-left-text05">出行&nbsp;穿戴</span>
+						<img class="box-02-02-left-text-img" src="img/d3/dy.png" />
+					</div>
+					<div class="box-02-02-left-text">
+						<span id="box-02-02-left-text06">智能&nbsp;路由器</span>
+						<img class="box-02-02-left-text-img" src="img/d3/dy.png" />
+					</div>
+					<div class="box-02-02-left-text">
+						<span id="box-02-02-left-text07">电源&nbsp;配件</span>
+						<img class="box-02-02-left-text-img" src="img/d3/dy.png" />
+					</div>
+					<div class="box-02-02-left-text">
+						<span id="box-02-02-left-text08">健康&nbsp;儿童</span>
+						<img class="box-02-02-left-text-img" src="img/d3/dy.png" />
+					</div>
+					<div class="box-02-02-left-text">
+						<span id="box-02-02-left-text09">耳机&nbsp;音箱</span>
+						<img class="box-02-02-left-text-img" src="img/d3/dy.png" />
+					</div>
+					<div class="box-02-02-left-text">
+						<span id="box-02-02-left-text10">生活&nbsp;箱包</span>
+						<img class="box-02-02-left-text-img" src="img/d3/dy.png" />
+					</div>
+				</div>
+				<div id="box-02-02-right">
+					<div id="box-02-02-right-01">
+						<img id="t1" src="img/1.jpg" />
+					</div>
+					<div id="box-02-02-right-02">
+						<img id="t2" src="img/2.jpg" />
+					</div>
+					<div id="box-02-02-right-03">
+						<img id="t3" src="img/3.jpg" />
+					</div>
+					<div id="box-02-02-right-04">
+						<img id="t4" src="img/4.png" />
+					</div>
+					<div id="box-02-02-right-05">
+						<img id="t5" src="img/5.png" />
+					</div>
+					<div id="box-02-02-right-06">
+						<img id="t6" src="img/6.png" />
+                    </div>
+					<div id="box-02-02-right-07">
+						<img id="t7" src="img/7.jpg" />
+					</div>
+					<div id="box-02-02-right-08">
+						<img id="t8" src="img/8.png" />
+					</div>
+					<div id="box-02-02-right-09">
+						<img id="t9" src="img/9.png" />
+					</div>
+					<div id="box-02-02-right-10">
+						<img id="t10" src="img/10.png" />
+					</div>
+				</div>
+			</div>
+			<div id="box-02-03"></div>
+		</div>
+	</body>
+</html>
